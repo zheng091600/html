@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="郑锐涵的个人作品集，展示三维场景、实时渲染与交互内容开发方向的项目作品。"
+    />
+    <title>郑锐涵 · 个人作品集</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- 左侧介绍栏 -->
+    <aside class="sidebar">
+      <div class="sidebar-inner">
+        <div class="avatar">
+          <img src="assets/images/chen.png" alt="头像" />
+        </div>
+        <h1 class="name">郑锐涵</h1>
+        <p class="tagline">实时三维渲染 / 虚拟场景 / 交互内容开发</p>
+        <p class="intro">
+          数字媒体技术专业学生，主要关注三维场景制作、实时渲染与交互内容开发，持续学习游戏美术、虚拟场景搭建与交互动画相关知识。
+        </p>
+
+        <h2 class="side-title">技能方向</h2>
+        <ul class="skills">
+          <li>UE5</li>
+          <li>Unity</li>
+          <li>实时三维渲染</li>
+          <li>虚拟场景</li>
+          <li>交互内容开发</li>
+        </ul>
+
+        <nav class="nav">
+          <a href="#projects" class="nav-link">项目作品</a>
+          <a href="#about" class="nav-link">关于我</a>
+          <a href="#contact" class="nav-link">联系方式</a>
+        </nav>
+      </div>
+    </aside>
+
+    <!-- 右侧主内容 -->
+    <main class="main">
+      <section id="projects" class="section">
+        <header class="section-head">
+          <h2 class="section-title">项目作品</h2>
+          <p class="section-sub">使用 UE5 与 Unity 创作的项目</p>
+        </header>
+        <div id="project-list" class="projects"><!-- 由 main.js 渲染 --></div>
+      </section>
+
+      <section id="about" class="section">
+        <header class="section-head">
+          <h2 class="section-title">关于我</h2>
+          <p class="section-sub">专注实时三维渲染与虚拟场景制作</p>
+        </header>
+        <div class="about-body">
+          <p>
+            我叫郑锐涵，一名数字媒体技术专业学生，目前主要关注三维场景制作、实时渲染与交互内容开发。
+          </p>
+          <p>
+            平时主要使用 UE5 和 Unity 进行项目创作，也在持续学习游戏美术、虚拟场景搭建、交互动画相关知识，习惯在项目中动手实践、不断积累作品。
+          </p>
+        </div>
+      </section>
+
+      <section id="contact" class="section">
+        <header class="section-head">
+          <h2 class="section-title">联系方式</h2>
+          <p class="section-sub">关于我的一些基本信息</p>
+        </header>
+        <ul class="contact-list">
+          <li>
+            <span class="contact-label">学校</span>
+            <span class="contact-value">广州软件学院（在读）</span>
+          </li>
+          <li>
+            <span class="contact-label">专业</span>
+            <span class="contact-value">数字媒体技术</span>
+          </li>
+          <li>
+            <span class="contact-label">城市</span>
+            <span class="contact-value">中国·广州</span>
+          </li>
+        </ul>
+      </section>
+
+      <footer class="footer">© 2026 郑锐涵 · 个人作品集</footer>
+    </main>
+
+    <script src="js/projects-data.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

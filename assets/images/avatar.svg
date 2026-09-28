@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#232a38"/>
+      <stop offset="1" stop-color="#3d4a5e"/>
+    </linearGradient>
+    <linearGradient id="suit" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2c3140"/>
+      <stop offset="1" stop-color="#1a1e28"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="512" height="512" fill="url(#bg)"/>
+
+  <!-- 颈部 -->
+  <rect x="214" y="296" width="84" height="96" rx="26" fill="#e7b489"/>
+
+  <!-- 肩膀 / 西装 -->
+  <path d="M96 512 C112 428 190 396 256 396 C322 396 400 428 416 512 Z" fill="url(#suit)"/>
+  <path d="M256 396 C234 428 214 460 210 512 L302 512 C298 460 278 428 256 396 Z" fill="#f4f2ec"/>
+  <path d="M256 396 L256 512" stroke="#cfc8ba" stroke-width="2"/>
+  <path d="M198 512 L210 512 L220 462 Z" fill="#d8d2c4" opacity="0.6"/>
+  <path d="M314 512 L302 512 L292 462 Z" fill="#d8d2c4" opacity="0.6"/>
+
+  <!-- 耳朵 -->
+  <ellipse cx="159" cy="228" rx="15" ry="24" fill="#dfad82"/>
+  <ellipse cx="353" cy="228" rx="15" ry="24" fill="#dfad82"/>
+
+  <!-- 脸部 -->
+  <ellipse cx="256" cy="232" rx="97" ry="116" fill="#efc49d"/>
+
+  <!-- 头发（吴彦祖式短发型） -->
+  <path d="M159 210 C148 138 196 96 256 96 C316 96 364 138 353 210 C342 152 304 128 256 128 C208 128 170 152 159 210 Z" fill="#16161c"/>
+  <path d="M159 210 C150 246 158 262 166 248 C172 236 168 214 172 198 Z" fill="#16161c"/>
+  <path d="M353 210 C362 246 354 262 346 248 C340 236 344 214 340 198 Z" fill="#16161c"/>
+
+  <!-- 眉毛 -->
+  <rect x="194" y="196" width="56" height="9" rx="4.5" fill="#16161c" transform="rotate(-6 222 200)"/>
+  <rect x="262" y="196" width="56" height="9" rx="4.5" fill="#16161c" transform="rotate(6 290 200)"/>
+
+  <!-- 眼睛 -->
+  <ellipse cx="224" cy="230" rx="17" ry="12" fill="#ffffff"/>
+  <ellipse cx="288" cy="230" rx="17" ry="12" fill="#ffffff"/>
+  <ellipse cx="225" cy="231" rx="8.5" ry="8.5" fill="#2e2825"/>
+  <ellipse cx="287" cy="231" rx="8.5" ry="8.5" fill="#2e2825"/>
+  <circle cx="228" cy="227" r="3.2" fill="#ffffff"/>
+  <circle cx="290" cy="227" r="3.2" fill="#ffffff"/>
+
+  <!-- 鼻子 -->
+  <path d="M256 238 C250 258 253 270 256 275" stroke="#d49c74" stroke-width="3.2" fill="none" stroke-linecap="round"/>
+
+  <!-- 微笑 -->
+  <path d="M231 292 C244 307 268 307 281 292" stroke="#b5765c" stroke-width="4" fill="none" stroke-linecap="round"/>
+
+  <!-- 下颌阴影 -->
+  <path d="M212 302 C238 324 274 324 300 302" stroke="#e0b088" stroke-width="2.5" fill="none"/>
+</svg>

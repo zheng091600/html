@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#7ec8f0"/>
+      <stop offset="1" stop-color="#d6ecf7"/>
+    </linearGradient>
+    <linearGradient id="lawn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#8fcb6e"/>
+      <stop offset="1" stop-color="#579b3f"/>
+    </linearGradient>
+    <linearGradient id="building" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f4ede0"/>
+      <stop offset="1" stop-color="#d9cdb8"/>
+    </linearGradient>
+  </defs>
+
+  <!-- 天空 -->
+  <rect width="1600" height="1000" fill="url(#sky)"/>
+
+  <!-- 太阳 -->
+  <circle cx="1330" cy="180" r="72" fill="#ffdf8a" opacity="0.95"/>
+  <circle cx="1330" cy="180" r="100" fill="#ffdf8a" opacity="0.25"/>
+
+  <!-- 云朵 -->
+  <g fill="#ffffff" opacity="0.9">
+    <ellipse cx="260" cy="150" rx="110" ry="40"/>
+    <ellipse cx="330" cy="130" rx="80" ry="32"/>
+    <ellipse cx="185" cy="140" rx="70" ry="30"/>
+    <ellipse cx="950" cy="210" rx="95" ry="34"/>
+    <ellipse cx="1020" cy="192" rx="70" ry="28"/>
+  </g>
+
+  <!-- 远景树木 -->
+  <g fill="#6da95a" opacity="0.7">
+    <ellipse cx="120" cy="520" rx="70" ry="90"/>
+    <ellipse cx="1480" cy="530" rx="80" ry="100"/>
+  </g>
+
+  <!-- 远处教学楼 -->
+  <g fill="#9fb8c9">
+    <rect x="60" y="380" width="240" height="260" rx="6"/>
+    <rect x="1300" y="400" width="220" height="240" rx="6"/>
+  </g>
+
+  <!-- 主教学楼 -->
+  <g>
+    <rect x="520" y="300" width="560" height="340" rx="10" fill="url(#building)"/>
+    <!-- 顶部檐 -->
+    <rect x="510" y="286" width="580" height="26" rx="6" fill="#b4453a"/>
+    <!-- 屋顶装饰线 -->
+    <rect x="510" y="312" width="580" height="8" fill="#c9b89d"/>
+    <!-- 塔楼 -->
+    <rect x="770" y="180" width="60" height="130" fill="#e6dcc9"/>
+    <rect x="762" y="168" width="76" height="24" rx="5" fill="#b4453a"/>
+    <!-- 塔楼钟面 -->
+    <circle cx="800" cy="225" r="20" fill="#fdfaf3" stroke="#a08c70" stroke-width="3"/>
+    <line x1="800" y1="225" x2="800" y2="213" stroke="#5a4a3a" stroke-width="3"/>
+    <line x1="800" y1="225" x2="811" y2="229" stroke="#5a4a3a" stroke-width="3"/>
+    <!-- 窗 -->
+    <g fill="#8fc9e8" stroke="#b3a283" stroke-width="2">
+      <rect x="560" y="360" width="52" height="70" rx="4"/>
+      <rect x="640" y="360" width="52" height="70" rx="4"/>
+      <rect x="720" y="360" width="52" height="70" rx="4"/>
+      <rect x="840" y="360" width="52" height="70" rx="4"/>
+      <rect x="920" y="360" width="52" height="70" rx="4"/>
+      <rect x="1000" y="360" width="52" height="70" rx="4"/>
+      <rect x="560" y="460" width="52" height="70" rx="4"/>
+      <rect x="640" y="460" width="52" height="70" rx="4"/>
+      <rect x="720" y="460" width="52" height="70" rx="4"/>
+      <rect x="840" y="460" width="52" height="70" rx="4"/>
+      <rect x="920" y="460" width="52" height="70" rx="4"/>
+      <rect x="1000" y="460" width="52" height="70" rx="4"/>
+    </g>
+    <!-- 大门 -->
+    <rect x="760" y="520" width="80" height="120" rx="40" fill="#7a5a3a"/>
+    <rect x="762" y="522" width="76" height="118" rx="38" fill="#5d4430"/>
+    <circle cx="790" cy="580" r="6" fill="#e8c97a"/>
+    <circle cx="810" cy="580" r="6" fill="#e8c97a"/>
+    <!-- 台阶 -->
+    <rect x="700" y="640" width="200" height="18" rx="4" fill="#c9bb9f"/>
+    <rect x="720" y="658" width="160" height="16" rx="4" fill="#bfb093"/>
+  </g>
+
+  <!-- 草坪 -->
+  <rect x="0" y="660" width="1600" height="340" fill="url(#lawn)"/>
+
+  <!-- 林荫路 -->
+  <path d="M600 1000 L640 700 C 650 680, 760 680, 800 700 L 960 1000 Z" fill="#d9c79e"/>
+  <path d="M800 700 L820 700 L 1000 1000 L 940 1000 Z" fill="#d0bd90"/>
+
+  <!-- 树木 -->
+  <g>
+    <rect x="370" y="560" width="26" height="110" rx="8" fill="#8a6a45"/>
+    <ellipse cx="383" cy="520" rx="80" ry="90" fill="#63a64b"/>
+    <ellipse cx="383" cy="500" rx="60" ry="70" fill="#74b859"/>
+
+    <rect x="1170" y="560" width="26" height="110" rx="8" fill="#8a6a45"/>
+    <ellipse cx="1183" cy="520" rx="80" ry="90" fill="#63a64b"/>
+    <ellipse cx="1183" cy="500" rx="60" ry="70" fill="#74b859"/>
+
+    <rect x="1330" y="600" width="22" height="90" rx="7" fill="#8a6a45"/>
+    <ellipse cx="1341" cy="565" rx="65" ry="75" fill="#5c9c47"/>
+
+    <rect x="220" y="600" width="22" height="90" rx="7" fill="#8a6a45"/>
+    <ellipse cx="231" cy="565" rx="65" ry="75" fill="#5c9c47"/>
+  </g>
+
+  <!-- 第一人称视角提示：画面中下角的引导箭头 -->
+  <g opacity="0.85">
+    <circle cx="1400" cy="860" r="46" fill="#ffffff" opacity="0.35"/>
+    <path d="M1400 880 L1380 852 L1400 862 L1420 852 Z" fill="#ffffff"/>
+  </g>
+</svg>

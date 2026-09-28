@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000">
+  <defs>
+    <linearGradient id="wall" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#7d8fb8"/>
+      <stop offset="1" stop-color="#5a6c93"/>
+    </linearGradient>
+    <linearGradient id="floor" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#a9774d"/>
+      <stop offset="1" stop-color="#7d5638"/>
+    </linearGradient>
+  </defs>
+
+  <!-- 墙面 -->
+  <rect width="1600" height="1000" fill="url(#wall)"/>
+
+  <!-- 地板 -->
+  <path d="M0 720 L1600 720 L1600 1000 L0 1000 Z" fill="url(#floor)"/>
+  <g stroke="#8a603f" stroke-width="4" opacity="0.6">
+    <line x1="200" y1="720" x2="120" y2="1000"/>
+    <line x1="600" y1="720" x2="520" y2="1000"/>
+    <line x1="1000" y1="720" x2="920" y2="1000"/>
+    <line x1="1400" y1="720" x2="1320" y2="1000"/>
+  </g>
+
+  <!-- 窗户 -->
+  <rect x="1080" y="180" width="340" height="420" rx="10" fill="#bcd9ee"/>
+  <rect x="1095" y="195" width="310" height="390" rx="8" fill="#8fc4e8"/>
+  <g stroke="#e8e4d8" stroke-width="10">
+    <line x1="1250" y1="195" x2="1250" y2="585"/>
+    <line x1="1095" y1="390" x2="1405" y2="390"/>
+  </g>
+  <circle cx="1330" cy="300" r="40" fill="#ffdf8a" opacity="0.85"/>
+  <!-- 窗帘 -->
+  <path d="M1060 150 Q1120 420 1065 640 L1035 640 Q1075 420 1030 150 Z" fill="#c96f4a"/>
+  <path d="M1440 150 Q1380 420 1435 640 L1465 640 Q1425 420 1470 150 Z" fill="#c96f4a"/>
+
+  <!-- 书架 -->
+  <g>
+    <rect x="150" y="260" width="300" height="420" rx="10" fill="#7a5230"/>
+    <rect x="170" y="280" width="260" height="90" fill="#6d4728"/>
+    <rect x="170" y="390" width="260" height="90" fill="#6d4728"/>
+    <rect x="170" y="500" width="260" height="90" fill="#6d4728"/>
+    <g fill="#b3492f">
+      <rect x="185" y="300" width="34" height="55"/>
+      <rect x="228" y="292" width="30" height="63"/>
+      <rect x="267" y="304" width="38" height="51"/>
+      <rect x="185" y="410" width="40" height="55"/>
+      <rect x="234" y="402" width="30" height="63"/>
+      <rect x="273" y="414" width="36" height="51"/>
+      <rect x="185" y="520" width="34" height="55"/>
+      <rect x="228" y="512" width="32" height="63"/>
+      <rect x="269" y="524" width="38" height="51"/>
+    </g>
+  </g>
+
+  <!-- 桌子 -->
+  <rect x="620" y="640" width="360" height="26" rx="8" fill="#7a5230"/>
+  <rect x="660" y="666" width="30" height="90" fill="#5f3f24"/>
+  <rect x="910" y="666" width="30" height="90" fill="#5f3f24"/>
+
+  <!-- 桌上物品：放大镜 -->
+  <circle cx="700" cy="620" r="40" fill="#e8f2f8" stroke="#4a5a6a" stroke-width="10"/>
+  <line x1="728" y1="648" x2="768" y2="688" stroke="#8a6a3a" stroke-width="14" stroke-linecap="round"/>
+
+  <!-- 桌上物品：钥匙 -->
+  <g stroke="#e8c97a" stroke-width="12" fill="none" stroke-linecap="round">
+    <circle cx="850" cy="612" r="22"/>
+    <line x1="868" y1="630" x2="920" y2="660"/>
+    <path d="M920 660 L934 654 L926 670 Z" fill="#e8c97a"/>
+  </g>
+
+  <!-- 桌上物品：木箱（宝箱） -->
+  <g>
+    <path d="M540 600 L660 600 L630 680 L570 680 Z" fill="#b07a3f"/>
+    <path d="M545 608 L655 608 L640 664 L560 664 Z" fill="#96682f"/>
+    <rect x="570" y="600" width="60" height="16" rx="6" fill="#e8c97a"/>
+    <circle cx="600" cy="616" r="7" fill="#5d4430"/>
+  </g>
+
+  <!-- 地上纸片（线索） -->
+  <rect x="1180" y="760" width="120" height="84" rx="6" fill="#f4f0e2" transform="rotate(-8 1240 802)"/>
+  <g stroke="#b3a283" stroke-width="5" opacity="0.7">
+    <line x1="1198" y1="782" x2="1280" y2="772" transform="rotate(-8 1240 802)"/>
+    <line x1="1198" y1="802" x2="1262" y2="796" transform="rotate(-8 1240 802)"/>
+  </g>
+
+  <!-- 光效与悬浮提示 -->
+  <g>
+    <circle cx="600" cy="540" r="14" fill="#ffe08a" opacity="0.9"/>
+    <circle cx="700" cy="560" r="8" fill="#ffe08a" opacity="0.7"/>
+    <circle cx="845" cy="570" r="10" fill="#ffe08a" opacity="0.8"/>
+    <path d="M600 540 L590 528 M600 540 L610 528 M600 540 L588 540 M600 540 L612 540" stroke="#ffe08a" stroke-width="4" stroke-linecap="round" opacity="0.9"/>
+  </g>
+
+  <!-- 底部游戏 UI 栏 -->
+  <rect x="0" y="920" width="1600" height="80" fill="#2e2a3a" opacity="0.92"/>
+  <rect x="40" y="938" width="120" height="44" rx="10" fill="#c96f4a"/>
+  <text x="100" y="966" font-family="Arial" font-size="26" font-weight="bold" fill="#ffffff" text-anchor="middle">物品</text>
+  <rect x="180" y="938" width="120" height="44" rx="10" fill="#5a6c93"/>
+  <text x="240" y="966" font-family="Arial" font-size="26" font-weight="bold" fill="#ffffff" text-anchor="middle">线索</text>
+  <rect x="320" y="938" width="120" height="44" rx="10" fill="#5a6c93"/>
+  <text x="380" y="966" font-family="Arial" font-size="26" font-weight="bold" fill="#ffffff" text-anchor="middle">提示</text>
+  <circle cx="1440" cy="960" r="30" fill="#7a5230" stroke="#e8c97a" stroke-width="6"/>
+  <path d="M1430 960 L1450 950 L1440 962 L1450 970 Z" fill="#ffffff"/>
+</svg>

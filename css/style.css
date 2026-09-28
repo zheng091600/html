@@ -1,0 +1,461 @@
+/* ==========================================================================
+   个人作品集 样式
+   桌面端：左侧介绍栏 + 右侧主内容
+   移动端：上下布局
+   ========================================================================== */
+
+:root {
+  --bg: #f7f6f3;
+  --bg-side: #ffffff;
+  --text: #1f2430;
+  --text-soft: #6b7180;
+  --accent: #b23b3b; /* 强调色：砖红，形成视觉记忆点 */
+  --accent-soft: #f3e6e3;
+  --line: #e8e6e1;
+  --radius: 14px;
+  --sidebar-w: 340px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "PingFang SC", "Microsoft YaHei", "Segoe UI", system-ui, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ---------- 全局布局 ---------- */
+body {
+  display: flex;
+}
+
+/* ---------- 左侧介绍栏 ---------- */
+.sidebar {
+  width: var(--sidebar-w);
+  flex-shrink: 0;
+  background: var(--bg-side);
+  border-right: 1px solid var(--line);
+  min-height: 100vh;
+}
+
+.sidebar-inner {
+  position: sticky;
+  top: 0;
+  padding: 3rem 2rem;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.avatar {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid var(--accent-soft);
+  margin-bottom: 1.2rem;
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.name {
+  font-size: 1.7rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.tagline {
+  margin-top: 0.3rem;
+  color: var(--accent);
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.intro {
+  margin-top: 1rem;
+  color: var(--text-soft);
+  font-size: 0.95rem;
+}
+
+.side-title {
+  margin-top: 2rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-soft);
+}
+
+.skills {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.8rem;
+}
+
+.skills li {
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-size: 0.82rem;
+  padding: 0.28rem 0.7rem;
+  border-radius: 999px;
+}
+
+.nav {
+  margin-top: auto;
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.nav-link {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--line);
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+/* ---------- 右侧主内容 ---------- */
+.main {
+  flex: 1;
+  min-width: 0;
+  padding: 4rem clamp(1.5rem, 5vw, 5rem);
+  max-width: 1080px;
+}
+
+.section + .section {
+  margin-top: 4rem;
+}
+
+.section-head {
+  margin-bottom: 1.6rem;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 0.8rem;
+}
+
+.section-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  position: relative;
+  display: inline-block;
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.8rem;
+  width: 2.2rem;
+  height: 3px;
+  background: var(--accent);
+}
+
+.section-sub {
+  margin-top: 0.6rem;
+  color: var(--text-soft);
+  font-size: 0.9rem;
+}
+
+/* ---------- 项目作品：纵向连续展示 ---------- */
+.projects {
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+}
+
+.project {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: clamp(1.5rem, 4vw, 3rem);
+  align-items: center;
+}
+
+/* 配图在右侧时，切换列顺序 */
+.project.media-right .project-media {
+  order: 2;
+}
+
+.project-media {
+  border-radius: var(--radius);
+  overflow: hidden;
+  aspect-ratio: 16 / 10;
+  background: var(--accent-soft);
+}
+
+.project-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.project-media:hover img {
+  transform: scale(1.03);
+}
+
+.project-info .category {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  padding: 0.2rem 0.7rem;
+  border-radius: 999px;
+  margin-bottom: 0.9rem;
+}
+
+.project-info h3 {
+  font-size: 1.35rem;
+  margin-bottom: 0.6rem;
+}
+
+.project-info p {
+  color: #4b5261;
+  font-size: 1.12rem;
+  line-height: 1.85;
+}
+
+.stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 1rem;
+}
+
+.stack span {
+  font-size: 0.85rem;
+  color: var(--text);
+  background: #efece6;
+  padding: 0.24rem 0.68rem;
+  border-radius: 6px;
+}
+
+.project-meta {
+  margin-top: 1rem;
+  color: var(--text-soft);
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.project-meta .date::before {
+  content: "·";
+  margin-right: 0.6rem;
+  color: var(--accent);
+}
+
+.project-links {
+  margin-top: 1.2rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.project-links a {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--accent);
+  border-bottom: 1px solid var(--accent);
+  padding-bottom: 2px;
+  transition: opacity 0.2s;
+}
+
+.project-links a:hover {
+  opacity: 0.7;
+}
+
+/* ---------- 关于我 ---------- */
+.about-body {
+  max-width: 60ch;
+  color: var(--text-soft);
+  font-size: 1rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.about-body p:first-child {
+  color: var(--text);
+  font-size: 1.1rem;
+}
+
+/* ---------- 联系方式 ---------- */
+.contact-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  max-width: 480px;
+}
+
+.contact-list li {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 0.8rem;
+}
+
+.contact-label {
+  color: var(--text-soft);
+  font-size: 0.85rem;
+  min-width: 4em;
+}
+
+.contact-list a {
+  font-weight: 600;
+  color: var(--text);
+}
+
+.contact-list a:hover {
+  color: var(--accent);
+}
+
+.contact-value {
+  font-weight: 600;
+  color: var(--text);
+  text-align: right;
+}
+
+/* ---------- 页脚 ---------- */
+.footer {
+  margin-top: 4rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--line);
+  color: var(--text-soft);
+  font-size: 0.85rem;
+}
+
+/* ==========================================================================
+   移动端：上下布局
+   ========================================================================== */
+@media (max-width: 768px) {
+  body {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    min-height: auto;
+    border-right: none;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .sidebar-inner {
+    position: static;
+    height: auto;
+    padding: 1.6rem 1.4rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.6rem 1.2rem;
+    overflow: visible;
+  }
+
+  .avatar {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 0;
+  }
+
+  .name {
+    font-size: 1.3rem;
+  }
+
+  .tagline,
+  .intro,
+  .side-title {
+    flex-basis: 100%;
+  }
+
+  .tagline {
+    margin-top: 0;
+  }
+
+  .side-title {
+    margin-top: 0.6rem;
+  }
+
+  .skills {
+    margin-top: 0;
+  }
+
+  .nav {
+    margin-top: 0.4rem;
+    flex-direction: row;
+    gap: 1.2rem;
+    width: 100%;
+  }
+
+  .nav-link {
+    border-bottom: none;
+    border-bottom: 2px solid transparent;
+    padding: 0.2rem 0;
+  }
+
+  .nav-link.active {
+    border-color: var(--accent);
+  }
+
+  .main {
+    padding: 2rem 1.2rem 1.2rem;
+  }
+
+  .project {
+    grid-template-columns: 1fr;
+  }
+
+  /* 移动端统一图片在上 */
+  .project.media-right .project-media {
+    order: 0;
+  }
+
+  .project-media {
+    aspect-ratio: 16 / 9;
+  }
+
+  .section + .section {
+    margin-top: 3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-list li {
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+
+  .contact-value {
+    text-align: left;
+  }
+}
